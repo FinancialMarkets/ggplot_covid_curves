@@ -86,10 +86,10 @@ ggplot(new_graphic_ggplot, aes(x = days_since_ma_3, y = cumulative_cases)) +
     geom_line(aes(group = countriesAndTerritories), colour = '#0066CC', show.legend = FALSE) +
       scale_y_log10() +
     facet_wrap(~countriesAndTerritories) + #, ncol = 10) +
-    labs(x = "Days Since an Average of 3 Cumulative Cases", y = "Cumulative Cases (in log)") 
+    labs(x = "Days Since an Average of 3 Cumulative Cases", y = "Cumulative Cases (in log)", subtitle = paste0("Data from ", min(new_graphic_ggplot$dateRep), " to ", max(new_graphic_ggplot$dateRep), " | Created: ", date(), " EST")) 
 
-ggsave("./cumulative_cases.pdf")
-ggsave("./cumulative_cases.png")
+ggsave("./cumulative_cases.pdf", width = 15, height = 8.67)
+ggsave("./cumulative_cases.png", width = 15, height = 8.67)
 ## saving as Saving 15 x 8.67 in image is the right one
 
 
@@ -100,10 +100,10 @@ ggplot(new_graphic_ggplot, aes(x = days_since_ma_3, y = cumulative_deaths)) +
     geom_line(aes(group = countriesAndTerritories), colour = '#0066CC', show.legend = FALSE) +
       scale_y_log10() +
     facet_wrap(~countriesAndTerritories) + #, ncol = 10) +
-    labs(x = "Days Since an Average of 3 Cumulative Cases", y = "Cumulative Deaths (in log)") 
+    labs(x = "Days Since an Average of 3 Cumulative Cases", y = "Cumulative Deaths (in log)", subtitle = paste0("Data from ", min(new_graphic_ggplot$dateRep), " to ", max(new_graphic_ggplot$dateRep), " | Created: ", date(), " EST")) 
 
-ggsave("./cumulative_deaths.pdf")
-ggsave("./cumulative_deaths.png")
+ggsave("./cumulative_deaths.pdf", width = 15, height = 8.67)
+ggsave("./cumulative_deaths.png", width = 15, height = 8.67)
 ## saving as Saving 15 x 8.67 in image is the right one
 
 
